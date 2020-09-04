@@ -67,12 +67,7 @@ public class IframeTest {
 
           Alert interface'inden nesne olusturularak yapildi
           */
-
-
     }
-
-
-
 
     @AfterClass
     public void tearDown (){
