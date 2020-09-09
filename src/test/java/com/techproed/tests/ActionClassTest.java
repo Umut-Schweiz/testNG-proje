@@ -50,7 +50,34 @@ public class ActionClassTest extends TestBase {
             e.printStackTrace();
         }
         actions.sendKeys(Keys.PAGE_UP).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();//cok az asagi yukari gidiyie
-
+        actions.sendKeys(Keys.ARROW_UP);
     }
+    @Test
+    public void buyukKucukYazma(){
+        // MERHABA nasılsınız
+        driver.get("http://google.com");
+        // name="q"
+        WebElement aramaKutusu = driver.findElement(By.name("q"));
+        // bu standart yazma methodumuz
+        //aramaKutusu.sendKeys("merhaba nasılsınız");
+        // bu şekilde her karakteri büyük yapar
+        // aramaKutusu.sendKeys(Keys.SHIFT + "merhaba nasılsınız");
+        Actions actions = new Actions(driver);
+        actions.moveToElement(aramaKutusu).click()
+                .keyDown(Keys.SHIFT)
+                .sendKeys("merhaba")
+                .keyUp(Keys.SHIFT)
+                .sendKeys(" nasılsınız")
+                .perform();
+    }
+    @Test
+    public void dragAndDrop(){  // sürükle - bırak
+        driver.get("http://google.com");
+        WebElement aramaKutusu = driver.findElement(By.name("q"));
+        WebElement logo = driver.findElement(By.id("hplogo"));
+        Actions actions = new Actions(driver);
+        // logo webelementini, aramaKutusu webelementine sürükle ve bırak.
+        actions.dragAndDrop(logo,aramaKutusu).perform();
+    }
+
 }
