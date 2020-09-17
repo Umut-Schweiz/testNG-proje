@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite - glbrader.com">
+    <test name="Test - GlbSignUpTest testleri">
+        <!-- XML dosyasında değişiklik yaptıktan sonra, dosyayı CTRL+S
+             ile ya da File->Save All ile kaydetmeniz gerekiyorç
+        -->
+        <classes>
+            <class name="com.techproed.smoketests.GlbSignUpTest"></class>
+        </classes>
+    </test>
+    <test name="Test - Facebook Testler">
+        <classes>
+            <class name="com.techproed.smoketests.FacebookLoginTest"></class>
+        </classes>
+    </test>
+    <test name="Test -smoketest paket">
+        <packages>
+            <package name="com.techproed.smoketests"></package>
+        </packages>
+    </test>
+</suite>

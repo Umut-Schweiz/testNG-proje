@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite - Test Grupları">
+
     <test name="grubu 'glbtrader' ve 'fhctrip' olan testler">
         <groups>
             <run>
@@ -15,4 +16,5 @@
             <package name=".*"></package>
         </packages>
     </test>
+
 </suite>

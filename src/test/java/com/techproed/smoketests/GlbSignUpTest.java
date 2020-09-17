@@ -4,8 +4,22 @@ import com.techproed.utilities.ConfigurationReader;
 import com.techproed.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-public class GlbSignUpTest {
+
+
+    public class GlbSignUpTest {
+
+    @BeforeSuite
+    public void beforeSuite(){
+        System.out.println("beforeSuite çalıştı");
+    }
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("beforeTest çalıştı");
+    }
+
     @Test (  groups = {"glbtrader", "hesapolusturma"} )
     public void test(){
         /*
