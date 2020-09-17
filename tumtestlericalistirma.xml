@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression">
+    
+    <test name="Tum Testler">
+        
+        
+        <packages>
+            <package name=".*"></package>
+        </packages>
+        
+        
+    </test>
+    
+</suite>

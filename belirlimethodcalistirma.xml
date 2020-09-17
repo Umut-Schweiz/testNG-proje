@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite - belirli methodlar">
+    <test name="Test - method test">
+        <classes>
+            <class name="com.techproed.tests.ActionClassTest">
+                <methods>
+                    <!-- Method eklemek için "include" -->
+                    <!-- Sadece include ettiğimiz methodlar çalışır -->
+                    <include name="sagTiklama"></include>
+                    <include name="hoverOver"></include>
+                </methods>
+            </class>
+            <class name="com.techproed.tests.WaitTest">
+                <methods>
+                    <!-- exlude ile yazdığınız methodlar hariç, class'taki tüm
+                         testler çalıştırılır -->
+                    <exclude name="implicitlyWait"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

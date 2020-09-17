@@ -4,7 +4,7 @@ import com.techproed.utilities.TestBase;
 import org.testng.annotations.Test;
 public class FhcTripLoginTest extends TestBase {
 
-    @Test
+    @Test (  groups = {"fhctrip", "logın"} )
     public void test() {
 
         driver.get("http://fhctrip-qa.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin");

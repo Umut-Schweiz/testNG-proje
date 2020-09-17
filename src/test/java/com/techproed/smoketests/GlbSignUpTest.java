@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 public class GlbSignUpTest {
-    @Test
+    @Test (  groups = {"glbtrader", "hesapolusturma"} )
     public void test(){
         /*
          * 1. Adım : https://www.glbtrader.com/register-verified.html adresine gidelim
