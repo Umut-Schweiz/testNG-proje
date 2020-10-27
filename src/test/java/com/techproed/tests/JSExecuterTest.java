@@ -21,8 +21,19 @@ public class JSExecuterTest {
         JSExecutor.scrollDownByJS();
         Thread.sleep(2000);
         //<span class="a-size-base a-color-base a-text-bold" dir="auto">Phone Color</span>
-        WebElement fiyatlar = Driver.getDriver()
-                .findElement(By.xpath("//span[.='Phone Color'"));
-        JSExecutor.scrollInToViewJS(fiyatlar);
+        WebElement phone = Driver.getDriver()
+                .findElement(By.xpath("//span[.='Phone Color']"));
+        JSExecutor.scrollInToViewJS(phone);
+        // JS ile bir webelementin arkaplan rengini değiştirebiliyoruz..(DEĞİŞKEN)
+
+        JSExecutor.flash(phone);
+        WebElement condition = Driver.getDriver()
+                .findElement(By.xpath("//*[.='Condition']"));
+        // JS ile bir webelementin arkaplan rengini değiştirebiliyoruz..(SABİT)
+        JSExecutor.changeColor("rgb(255,0,0" , condition);
+
+        // JS ile isterseniz websayfasında JSAlert üretebiliyorsunuz..
+        JSExecutor.generateAlert("Test BİTTİ ! Eyvah, selenium dersleri de bitti.. Selenium derslerinin son satırının kodu benim: )");
+
     }
 }
